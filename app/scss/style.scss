@@ -195,9 +195,10 @@
     padding: 0 20px;
     width: 158px;
     -webkit-animation: all .3s;
-    -o-transition: all .3s;
+    transition: all .3s;
     height: 0;
     overflow: hidden;
+    z-index: 1;
 
     a {
         font-size: 12px;
@@ -374,14 +375,15 @@
 
 // modal ============================
 
-#modal{
+#modal {
     background-color: $green;
     max-width: 730px;
     width: 100%;
     padding-top: 90px;
     padding-bottom: 100px;
 }
-.login__title{
+
+.login__title {
     text-align: center;
     font-size: 48px;
     margin-bottom: 40px;
@@ -389,32 +391,38 @@
     text-transform: uppercase;
     @include f700;
 }
-.login__wrapper{
-    form{
+
+.login__wrapper {
+    form {
         max-width: 400px;
         margin: 0 auto;
     }
-    label{
+
+    label {
         position: relative;
         display: block;
         width: 100%;
-        &::before{
+
+        &::before {
             position: absolute;
             font-family: 'icomoon';
             font-size: 14px;
             color: #fff;
-            left: 18px;   
-            top: 9px;   
+            left: 18px;
+            top: 9px;
         }
     }
-    .login__label-name::before{
+
+    .login__label-name::before {
         content: "\f007"
 
     }
-    .login__label-pass::before{
+
+    .login__label-pass::before {
         content: "\f023"
     }
-    input{
+
+    input {
         height: 43px;
         margin-bottom: 8px;
         border: none;
@@ -424,12 +432,14 @@
         padding-left: 40px;
         display: block;
         width: 100%;
-        &::placeholder{
+
+        &::placeholder {
             color: #fff;
             font-size: 14px;
         }
     }
-    button{
+
+    button {
         margin-top: 19px;
         padding: 18px 0 16px;
         background-color: #fff;
@@ -443,13 +453,15 @@
         box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
     }
 }
-.lost-pass{
+
+.lost-pass {
     display: block;
     margin-top: 20px;
     color: #fff;
     font-size: 18px;
 }
-.creat-acc{
+
+.creat-acc {
     margin-top: 19px;
     padding: 15px 0 15px 28px;
     text-align: center;
@@ -458,20 +470,22 @@
     color: #fff;
     font-size: 18px;
     position: relative;
-    &::before{
-        content:'\f044';
+
+    &::before {
+        content: '\f044';
         position: absolute;
         top: 15px;
         left: 35px;
         font-family: 'icomoon';
     }
 }
-.fancybox-button svg path{
+
+.fancybox-button svg path {
     color: #fff;
 }
 
 
-  
+
 
 
 
@@ -1687,12 +1701,6 @@ button.icon-unsorted {
     }
 }
 
-
-
-
-
-
-
 .product-one__more-icons {
     display: flex;
     justify-content: space-between;
@@ -1818,14 +1826,15 @@ button.icon-unsorted {
         font-size: 20px;
         text-align: center;
         position: relative;
-        &::before{
+
+        &::before {
             position: absolute;
             top: 6px;
             left: 0;
             right: 0;
         }
 
-        & + li {
+        &+li {
             margin-left: 4px;
         }
     }
@@ -1860,17 +1869,20 @@ button.icon-unsorted {
         width: 34px;
     }
 }
+
 .aside__item-sales {
     padding-top: 23px;
     font-size: 16px;
     @include f300;
     color: #707070;
-    span{
+
+    span {
         font-size: 20px;
         @include f700;
         color: #263238;
         padding-right: 13px;
-        &::before{
+
+        &::before {
             content: "\f07a";
             color: #a6b5bb;
             padding-right: 20px;
@@ -1878,15 +1890,18 @@ button.icon-unsorted {
         }
     }
 }
-.aside__item.sales-number{
+
+.aside__item.sales-number {
     padding-bottom: 25px;
 }
+
 .information__line {
     font-size: 14px;
     color: #70838d;
     margin-top: 20px;
     line-height: 18px;
-    span{
+
+    span {
         color: $bg;
         @include f500;
     }
@@ -1899,24 +1914,29 @@ button.icon-unsorted {
 
 
 .page-404__wrapper,
-.about__wrapper{
+.about__wrapper,
+.contact__wrapper {
     border: 1px solid #dcdcdc;
-    color: #fff;
+    background-color: #fff;
     margin-bottom: 150px;
 }
+
 .page-404__head,
-.about__head {
+.about__head,
+.contact__head {
     font-size: 24px;
     color: #444;
     padding: 23px 27px;
     @include f500;
     border-bottom: 1px solid #dcdcdc;
 }
+
 .page-404__inner {
     text-align: center;
     background-color: $green;
     color: #fff;
 }
+
 .page-404__404 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
@@ -1925,7 +1945,8 @@ button.icon-unsorted {
     padding-bottom: 20px;
     line-height: 300px;
     position: relative;
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
         background-image: url(../img/page404.png);
@@ -1934,18 +1955,21 @@ button.icon-unsorted {
         margin-left: 20px;
     }
 }
+
 .page-404__title {
     margin-bottom: 30px;
     @include f300;
     font-size: 30px;
-    
+
 }
+
 .page-404__text {
     max-width: 501px;
     margin: 0 auto;
     font-size: 18px;
     margin-bottom: 60px;
 }
+
 .page-404__link {
     color: #fff;
     font-size: 14px;
@@ -1968,21 +1992,472 @@ button.icon-unsorted {
 .about__inner {
     padding: 0px 50px;
 }
+
 .about__box {
-    h3{
+    h3 {
         font-size: 20px;
         @include f700;
         color: #444;
         margin-top: 40px;
         margin-bottom: 15px;
     }
-    p{
+
+    p {
         margin-bottom: 40px;
         color: #707070;
     }
 }
 
 // end about =================
+
+
+// contact ==================
+
+
+.contact__head {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.contact__inner {
+    padding: 35px 40px 15px;
+}
+
+.contact__map {
+    margin-bottom: 50px;
+
+    iframe {
+        width: 100%;
+        height: 415px;
+        border: none;
+    }
+}
+
+.contact__box {
+    display: flex;
+}
+
+.contact__info {
+    margin-right: 30px;
+    max-width: 330px;
+    width: 100%;
+}
+
+.contact__info-item {
+    margin-bottom: 30px;
+}
+
+.contact__info-title {
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 20px;
+    @include f500;
+    color: $bg;
+    padding-left: 40px;
+    margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        width: 44px;
+        height: 4px;
+        background-color: $green;
+        left: 40px;
+        bottom: 0;
+        position: absolute;
+    }
+
+    &::before {
+        color: $green;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.contact__info-content {
+    padding-left: 40px;
+    color: #707070;
+    max-width: 231px;
+}
+
+.contact__form-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    @include f500;
+    color: #333;
+}
+
+.contact__form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__form {
+    width: 100%;
+
+    input {
+        border: none;
+        display: inline-block;
+        height: 43px;
+        padding-left: 17px;
+        padding-right: 17px;
+        background-color: #f1f4f5;
+        width: 350px;
+        display: block;
+        margin-bottom: 30px;
+
+        &::placeholder {
+            font-size: 15px;
+            color: #7a7a7a;
+        }
+    }
+
+    textarea {
+        border: none;
+        padding: 13px 17px;
+        height: 190px;
+        background-color: #f1f4f5;
+        width: 100%;
+        display: block;
+        resize: none;
+        margin-bottom: 23px;
+
+        &::placeholder {
+            font-size: 15px;
+            color: #7a7a7a;
+        }
+    }
+
+    button {
+        border: none;
+        background-color: $green;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        @include f700;
+        color: #fff;
+        padding: 20px 5px;
+        width: 190px;
+
+    }
+}
+
+// end contact =================
+
+
+
+// settings =====================
+
+
+.settings {
+    padding-bottom: 100px;
+}
+
+.product-one__tabs.settings__tabs {
+    display: flex;
+
+    .tabs {
+        max-width: 270px;
+        width: 100%;
+        margin-right: 30px;
+        border: 1px solid #dedede;
+        border-bottom: none;
+        text-align-last: left;
+        display: block;
+        height: 100%;
+
+        span {
+            display: block;
+            background-color: #fff;
+            border-bottom: 1px solid #dedede;
+            padding: 17px 17px 17px 50px;
+            color: #707070;
+            font-size: 14px;
+            @include f500;
+
+            &.active {
+                border-bottom: 1px solid $green;
+                color: #37474f;
+
+                &::before {
+                    color: $green;
+                }
+            }
+
+            &::before {
+                left: 24px;
+                color: #444444;
+            }
+        }
+    }
+
+    .tabs .tab+.tab {
+        border-left: none;
+    }
+
+    .tab_content {
+        width: 100%;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.page-box {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    min-height: 100%;
+}
+
+.page-box__title {
+    border-bottom: 1px solid #dedede;
+    padding: 18px 34px;
+    font-size: 24px;
+    @include f500;
+    color: $bg;
+}
+
+.page-box__content {
+    padding: 30px 35px 80px;
+}
+
+.settings__line {
+    margin-bottom: 21px;
+    display: flex;
+    align-items: center;
+
+    label {
+        width: 260px;
+        color: #444;
+    }
+
+    input {
+        max-width: 540px;
+        width: 100%;
+        height: 40px;
+        background-color: #f9f9f9;
+        color: #000;
+        border: 1px solid #dedede;
+        padding: 0px 10px;
+    }
+
+    select {
+        max-width: 540px;
+        width: 100%;
+        height: 40px;
+        background-color: #f9f9f9;
+        color: #000;
+        border: 1px solid #dedede;
+        padding: 0px 10px;
+        color: #707070;
+    }
+}
+
+
+// end settings =================
+
+
+//  profile    =================
+
+.profile__inner{
+    display: flex;
+    margin-bottom: 30px;
+
+}
+.profile__aside{
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+    & .footer__social-link{
+        margin-bottom: 30px;
+    }
+}
+.profile__content{
+    width: 100%;
+}
+.profile-status {
+    font-size: 13px;
+    color: #707070;
+    border: 1px solid #d6d6d6;
+    padding: 6px 9px 5px 30px;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        left: 11px;
+        top: 13px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+    }
+}
+
+.profile-on {
+    &::before {
+        background-color: $green;
+    }
+}
+
+.profile-off {
+    &::before {
+        background-color: $red;
+    }
+}
+
+.profile__aside-btn {
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.profile__aside-message {
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f500;
+    padding: 18px 10px;
+    position: relative;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+    background-color: $text;
+    &:before{
+        content: "\f003";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 50px;
+        top: 17px;
+    }
+}
+
+.profile__aside-following {
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f700;
+    background-color: $green;
+    padding: 18px 10px;
+}
+
+.profile__banner{
+    padding: 20px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    margin-bottom: 35px;
+}
+.profile__banner-images{
+    background-image: url(../img/content/baner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 332px;
+    background-position: center center;
+}
+.profile__items {
+    display: flex;
+    border: 1px solid #dedede;
+}
+.profile__item {
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 5px 17px;
+    & + .profile__item{
+        border-left: 1px solid #dedede;
+    }
+}
+.profile__item-title {
+    font-size: 14px;
+    color: $bg;
+    @include f500;
+}
+.profile__item-content {
+    font-size: 14px;
+    color: #707070;
+    @include f500;
+    &.profile__item-sales{
+        color: $bg;
+    }
+}
+.profile-settings{
+    .product-one__tabs.settings__tabs{
+        .tabs span{
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500;
+            color: #707070;
+            position: relative;
+            &.active::before{
+                color: $green;
+            }
+            &:before{
+                top: 15px;
+                left: 27px;
+                font-size: 14px;
+                font-family: 'icomoon';
+                color: #d0d0d0;
+                position: absolute;
+            }
+        }
+    }
+}
+.personal-box{
+    background-color: #fff;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+}
+.personal-box__title{
+    margin-bottom: 25px;
+    @include f700;
+    color: $bg;
+    font-size: 20px;
+}
+.personal-box__text{
+    margin-bottom: 20px;
+    p{
+        color: #707070;
+    }
+}
+.personal-box__item-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    
+}
+.personal-box__item-name{
+    @include f500;
+    font-size: 16px;
+    color: $bg;
+    font-style: italic;
+}
+
+.personal-box__item-number{
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+}
+.personal-box__item-line{
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    span{
+        display: block;
+        border-radius: 3px;
+        height: 15px;
+        background-image: url(../img/pro-bar.jpg);
+        background-repeat: repeat;
+    }
+}
+
+
+
+
+
+
+
+
+// end profile =================
 
 
 
