@@ -573,8 +573,9 @@
     background-color: $grey;
 
 }
+
 .products__wrapper,
-.product-slider__wrapper{
+.product-slider__wrapper {
     max-width: 1920px;
     margin: 0 auto;
 }
@@ -608,7 +609,7 @@
     flex-wrap: wrap;
 }
 
-.products .products__item{
+.products .products__item {
     flex-basis: calc(25% - 30px);
     margin-left: 30px;
 }
@@ -1602,7 +1603,6 @@ button.icon-unsorted {
             margin-left: 20px;
         }
     }
-
 }
 
 .link-live {
@@ -1741,8 +1741,6 @@ button.icon-unsorted {
     height: 90px;
 }
 
-.productmini__info {}
-
 .productmini__name {
     @include f500;
     font-size: 14px;
@@ -1758,6 +1756,42 @@ button.icon-unsorted {
     @include f700;
     font-size: 18px;
     color: $bg;
+}
+.price__box{
+    .jq-selectbox {
+        width: 100%;
+        min-width: 100px;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0px 30px 0 10px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        font-size: 15px;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+
+        &::before {
+            content: "\f0d7";
+            font-family: 'icomoon';
+            color: $green;
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+
 }
 
 // end product-one =================
@@ -2265,7 +2299,48 @@ button.icon-unsorted {
         padding: 0px 10px;
         color: #707070;
     }
+
+    .jq-selectbox__select {
+        text-decoration: none;
+    }
+    .jq-selectbox {
+        max-width: 540px;
+        width: 100%;
+    }
+
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        font-size: 15px;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+
+        &::before {
+            content: "\f0d7";
+            font-family: 'icomoon';
+        }
+    }
+
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+
 }
+
 
 
 // end settings =================
@@ -2487,6 +2562,7 @@ button.icon-unsorted {
     }
 }
 
+
 // end profile =================
 
 
@@ -2548,6 +2624,7 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+
         &::placeholder {
             color: #707070;
         }
@@ -2677,15 +2754,16 @@ button.icon-unsorted {
 .withdrawals__content {
     padding-left: 35px;
     padding-right: 40px;
+
     button {
-       margin-bottom: 50px; 
-       color: #fff;
-       background-color: $green;
-       border: none;
-       padding: 15px 36px;
-       cursor: pointer;
-   }
-    
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+    }
+
 }
 
 .withdrawal__form-line {
@@ -2698,6 +2776,7 @@ button.icon-unsorted {
         @include f500;
         color: $bg;
         margin-bottom: 15px;
+
         span {
             color: $green;
         }
@@ -2711,6 +2790,7 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+
         &::placeholder {
             color: #707070;
         }
@@ -2764,7 +2844,8 @@ button.icon-unsorted {
     align-items: center;
     font-size: 13px;
     color: #444;
-    &:nth-child(odd){
+
+    &:nth-child(odd) {
         background-color: #f9f9f9;
     }
 }
@@ -2788,12 +2869,13 @@ button.icon-unsorted {
 .withdrawals__content-status {
     width: 88px;
     @include f700;
-    &.withdrawals__content-paid{
+
+    &.withdrawals__content-paid {
         color: $green;
     }
 }
 
- 
+
 
 
 
