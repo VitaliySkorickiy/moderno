@@ -562,7 +562,13 @@
   .menu__list {
     top: 70px;
   }
-
+  .header{
+    overflow: hidden;
+    position: relative;
+  }
+  .header__btn-menu{
+    display: block;
+  }
   .header__btn-menu {
     width: 70px;
     height: 70px;
@@ -590,10 +596,8 @@
     left: 100%;
     right: -100%;
     z-index: 2;
-    display: none;
-
     &.active {
-      left: 70px;
+      left: 68px;
       right: 90px;
     }
   }
